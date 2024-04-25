@@ -13,16 +13,16 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class HighestCommonFactorControllerTests {
 
     @Test
-    public void test_throws_exception_when_input_array_is_null() {
+    public void test_request_body_is_null() {
         HighestCommonFactorService hcfService = new HighestCommonFactorService();
         HighestCommonFactorController hcfController = new HighestCommonFactorController(hcfService);
-        NumbersRequest numbersRequest = new NumbersRequest(null);
+        NumbersRequest numbersRequest = null;
 
-        assertThrows(NullPointerException.class, () -> {
-            hcfController.highestCommonFactor(numbersRequest);
-        });
+        ResponseEntity<?> response = hcfController.highestCommonFactor(numbersRequest);
+
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertEquals("Numbers array cannot be null or empty", response.getBody());
     }
-
     @Test
     public void test_valid_array_of_positive_integers() {
         HighestCommonFactorService hcfService = new HighestCommonFactorService();
