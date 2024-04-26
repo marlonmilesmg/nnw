@@ -1,6 +1,6 @@
 package za.co.marlonmagonjo.nnw;
 
-public class HighestCommonFactorV1 {
+public class HighestCommonFactor {
 
     public static void main(String[] args) {
         int[] numbers = {12, 24, 36};

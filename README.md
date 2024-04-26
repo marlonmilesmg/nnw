@@ -1,6 +1,6 @@
 # Highest Common Factor Calculator
 
-This project is a Spring Boot application that provides an API endpoint for calculating the highest common factor (HCF) of an array of integers.
+This project is a Maven application that provides an implementation for calculating the highest common factor (HCF) of an array of integers.
 
 ## Getting Started
 
@@ -9,40 +9,11 @@ To get started with this project, follow these steps:
 1. Clone the repository to your local machine.
 2. Ensure you have Java and Maven installed on your machine.
 3. Navigate to the project directory.
-4. Run `mvn spring-boot:run` to start the application.
+
 
 ## Usage
 
-Once the application is running, you can use the provided API endpoint to calculate the HCF.
-
-### API Endpoint http://localhost:3000/api/hcf
-
-#### `POST /api/hcf`
-
-Calculates the highest common factor (HCF) of an array of integers provided in the request body.
-
-##### Request Body
-
-```json
-{
-  "numbers": [integer1, integer2, ...]
-}
-```
-numbers: An array of integers for which the HCF needs to be calculated.
-
-### Response
-
-- 200 OK: Returns the calculated HCF if successful.
-- 400 Bad Request: Returns an error message if the request body is empty, the numbers array is null or empty, or if an invalid input is provided.
-
-### Dependencies
-
-This project depends on the following libraries:
-
-Spring Boot
-Lombok
-SLF4J
-These dependencies are managed using Maven.
+To use the HighestCommonFactor class, simply create an instance of the class and call the highestCommonFactor method, passing the array of numbers as an argument.
 
 # Address Printer
 
